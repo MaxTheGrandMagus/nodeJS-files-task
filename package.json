@@ -1,0 +1,15 @@
+{
+  "name": "file-task",
+  "version": "1.0.0",
+  "description": "NodeJS File Practice Task",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Max Batyrov <veyronmclord@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^4.1.0",
+    "lodash": "^4.17.20"
+  }
+}
