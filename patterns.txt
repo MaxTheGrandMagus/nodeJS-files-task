@@ -1,5 +1,1 @@
-Ipsum,
-scrambled,
-centuries,
-It has survived not only five centuries,
-fash
+Ipsum, scrambled, centuries, It has survived not only five centuries, fash

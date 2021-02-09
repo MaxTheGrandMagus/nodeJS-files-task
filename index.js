@@ -3,16 +3,24 @@ const chalk = require('chalk');
 const readline = require('readline');
 
 
-let inputTxt = fs.readFileSync('input.txt').toString().toLowerCase();
+let inputTxt = fs.readFileSync('input.txt').toString();
 console.log(chalk.greenBright("\ninput: "),inputTxt);
 
-let patternsTxt = fs.readFileSync('patterns.txt').toString().toLowerCase();
+let patternsTxt = fs.readFileSync('patterns.txt').toString();
 console.log(chalk.yellow("\npatterns: "),patternsTxt);
 
-const inp = inputTxt.split('.');
-const pat = patternsTxt.split(',');
+// const inp = inputTxt.split('.');
+// const inp = inputTxt.match(/\b(\w+)\b/g)
+const inp = inputTxt.match(/\b(\w+)'?(\w+)?\b/g) 
+
+// const pat = patternsTxt.split(',');
+// const pat = patternsTxt.match(/\b(\w+)\b/g)
+const pat = patternsTxt.match(/\b(\w+)'?(\w+)?\b/g) 
+
 let firstFound = [];
 let secondFound = [];
+console.log(inp);
+console.log(pat);
 
 
 /* FOR FIRST SUBTASK */ 
@@ -51,8 +59,8 @@ function secondTask(str1, str2) {
 function thirdTask(str1, str2) {
   function diffOneLetter(dif1, dif2) {
     let dist = 0;
-    dif1 = dif1.toLowerCase();
-    dif2 = dif2.toLowerCase();
+    // dif1 = dif1.toLowerCase();
+    // dif2 = dif2.toLowerCase();
     for (let i = 0, j = Math.max(dif1.length, dif2.length); i < j; i++) {
       if (!dif1[i] || !dif2[i] || dif1[i] !== dif2[i]) {
         dist++;
